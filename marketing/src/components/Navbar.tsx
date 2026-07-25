@@ -36,7 +36,7 @@ export default function Navbar() {
             ))}
           </div>
           <div className="hidden lg:flex items-center gap-3">
-            <a href="#install" className="text-sm font-semibold bg-gold-500 text-green-900 px-5 py-2 rounded-lg hover:bg-gold-400 transition-colors shadow-sm">Add to VS Code</a>
+            <a href="https://marketplace.visualstudio.com/items?itemName=vybe-team.vybe-tutor" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold bg-gold-500 text-green-900 px-5 py-2 rounded-lg hover:bg-gold-400 transition-colors shadow-sm">Add to VS Code</a>
           </div>
           <button className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -51,7 +51,7 @@ export default function Navbar() {
             <button key={link.id} onClick={() => { scrollTo(link.id); setOpen(false); }} className="block w-full text-left text-sm text-cream-200 hover:text-white py-3 transition-colors">{link.label}</button>
           ))}
           <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-green-800">
-            <a href="#install" className="text-sm font-semibold bg-gold-500 text-green-900 px-4 py-2.5 rounded-lg text-center">Add to VS Code</a>
+            <a href="https://marketplace.visualstudio.com/items?itemName=vybe-team.vybe-tutor" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold bg-gold-500 text-green-900 px-4 py-2.5 rounded-lg text-center">Add to VS Code</a>
           </div>
         </div>
       )}

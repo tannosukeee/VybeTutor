@@ -22,7 +22,7 @@ export default function FinalCTA() {
                 become the next &quot;oh, <em>that&apos;s</em> what&apos;s happening&quot; moment.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#install" className="bg-gold-500 text-green-900 font-semibold text-lg rounded-full px-10 py-4 hover:bg-gold-400 transition-colors shadow-lg hover:shadow-xl inline-block">
+                <a href="https://marketplace.visualstudio.com/items?itemName=vybe-team.vybe-tutor" target="_blank" rel="noopener noreferrer" className="bg-gold-500 text-green-900 font-semibold text-lg rounded-full px-10 py-4 hover:bg-gold-400 transition-colors shadow-lg hover:shadow-xl inline-block">
                   Add to VS Code — Free
                 </a>
                 <button onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })} className="text-cream-200 border border-cream-200/20 font-semibold rounded-full px-8 py-4 hover:bg-white/10 transition-colors">

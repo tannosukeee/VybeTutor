@@ -24,7 +24,7 @@ export default function Hero() {
               Vybe Tutor lives inside VS Code. As you write Python, JavaScript, Java, or C++, it explains what's happening line-by-line, asks quick checks on the tricky bits, and adapts to <em>your</em> level — so you actually understand the code you (and your AI) just shipped.
             </p>
             <div className={`flex flex-wrap gap-3 mb-8 transition-all duration-700 delay-300 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <a href="#install" className="bg-green-900 text-white font-semibold rounded-full px-8 py-4 hover:bg-green-800 transition-colors shadow-md hover:shadow-lg inline-flex items-center gap-2">
+              <a href="https://marketplace.visualstudio.com/items?itemName=vybe-team.vybe-tutor" target="_blank" rel="noopener noreferrer" className="bg-green-900 text-white font-semibold rounded-full px-8 py-4 hover:bg-green-800 transition-colors shadow-md hover:shadow-lg inline-flex items-center gap-2">
                 <span>🛡</span> Add to VS Code — Free
               </a>
               <button onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })} className="border-2 border-green-900/20 text-green-900 font-semibold rounded-full px-8 py-4 hover:bg-green-900 hover:text-white transition-all">

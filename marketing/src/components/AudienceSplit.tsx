@@ -56,7 +56,7 @@ export default function AudienceSplit() {
                   </div>
                 ))}
               </div>
-              <a href="#install" className="inline-block bg-gold-500 text-green-900 font-semibold rounded-full px-6 py-3 hover:bg-gold-400 transition-colors">
+              <a href="https://marketplace.visualstudio.com/items?itemName=vybe-team.vybe-tutor" target="_blank" rel="noopener noreferrer" className="inline-block bg-gold-500 text-green-900 font-semibold rounded-full px-6 py-3 hover:bg-gold-400 transition-colors">
                 I&apos;m a student →
               </a>
             </div>
