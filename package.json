@@ -1,7 +1,7 @@
 {
   "name": "vybe-tutor",
   "displayName": "Vybe Tutor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A local-first AI coding tutor that helps students understand code through contextual explanations and comprehension checks.",
   "publisher": "vybe-team",
   "icon": "resources/icon.png",
