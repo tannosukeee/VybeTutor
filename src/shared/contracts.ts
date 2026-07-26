@@ -36,6 +36,20 @@ export const TutorResponseSchema = z.object({
 export type TutorResponse = z.infer<typeof TutorResponseSchema>;
 export type DocReference = z.infer<typeof DocReferenceSchema>;
 
+export const GameStateSchema = z.object({
+  totalXp: z.number(),
+  level: z.number(),
+  xpInLevel: z.number(),
+  streak: z.number(),
+  combo: z.number(),
+  difficulty: z.number(),
+  isRecovering: z.boolean(),
+  lastMissedDifficulty: z.number().nullable(),
+  concept: z.string(),
+}).strict();
+
+export type GameState = z.infer<typeof GameStateSchema>;
+
 export const HostToWebviewMessageSchema = z.discriminatedUnion("type", [
   z.object({
     type: z.literal("tutorResponse"),
@@ -67,6 +81,10 @@ export const HostToWebviewMessageSchema = z.discriminatedUnion("type", [
       }),
     }),
   }),
+  z.object({
+    type: z.literal("gameState"),
+    payload: GameStateSchema,
+  }).strict(),
 ]);
 
 export type HostToWebviewMessage = z.infer<typeof HostToWebviewMessageSchema>;
@@ -88,6 +106,10 @@ export const WebviewToHostMessageSchema = z.discriminatedUnion("type", [
       questionId: z.string(),
       selectedOptionId: z.string(),
     }).strict(),
+  }).strict(),
+  z.object({
+    type: z.literal("gameStateUpdate"),
+    payload: GameStateSchema,
   }).strict(),
 ]);
 

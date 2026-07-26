@@ -44,6 +44,13 @@ export function App() {
           concept: message.data.concept,
         }));
       }
+
+      if (message.type === 'gameState') {
+        setGameState((prev) => ({
+          ...message.payload,
+          concept: prev.concept,
+        }));
+      }
     };
 
     window.addEventListener('message', handleMessage);
@@ -52,6 +59,7 @@ export function App() {
 
   const handleGameStateUpdate = (newState: GameState) => {
     setGameState(newState);
+    vscodeApi.postMessage({ type: 'gameStateUpdate', payload: newState });
   };
 
   return (

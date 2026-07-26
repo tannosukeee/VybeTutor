@@ -30,6 +30,10 @@
       {
         "command": "vybeTutor.showMoreFromInline",
         "title": "Vybe Tutor: Show More from Inline"
+      },
+      {
+        "command": "vybeTutor.setApiKey",
+        "title": "Vybe Tutor: Set Gemini API Key"
       }
     ],
     "viewsContainers": {
@@ -49,6 +53,22 @@
           "name": "Vybe Tutor"
         }
       ]
+    },
+    "configuration": {
+      "title": "Vybe Tutor",
+      "properties": {
+        "vybeTutor.autoDetect.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show an inline \"Explain this\" prompt when a large block of code is pasted or accepted from an AI suggestion."
+        },
+        "vybeTutor.autoDetect.minLines": {
+          "type": "number",
+          "default": 3,
+          "minimum": 1,
+          "description": "Minimum number of lines inserted at once before Vybe Tutor offers to explain it."
+        }
+      }
     }
   },
   "scripts": {
